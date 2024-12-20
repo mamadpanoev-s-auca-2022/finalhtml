@@ -1,0 +1,770 @@
+/* ===================== */
+/* Global Styles */
+/* ===================== */
+
+/* Reset default margins and paddings, set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply global font and text color */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "search search"
+    "assoc assoc"
+    "main sidebar"
+    "footer footer";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  min-height: 100vh;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove default link styles and inherit color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 20px; /* Increased padding for larger buttons */
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn.green {
+  background: #28a745;
+  color: #fff;
+}
+
+.btn.green:hover {
+  background: #218838;
+}
+
+.btn.red {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn.red:hover {
+  background: #c82333;
+}
+
+.btn.blue {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.blue:hover {
+  background: #0069d9;
+}
+
+.btn.blue-outline {
+  background: transparent;
+  color: #007bff;
+  border: 2px solid #007bff; /* Increased border thickness */
+}
+
+.btn.blue-outline:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ===================== */
+/* Header Styles */
+/* ===================== */
+
+.top-header {
+  grid-area: header;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 40px; /* Increased padding for a larger header */
+}
+
+.top-header__content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Increased spacing between elements */
+}
+
+.demir-logo {
+  max-height: 70px; /* Increased logo size */
+}
+
+.mortgage-info h1 {
+  margin: 0;
+  font-size: 32px; /* Increased from 24px */
+  color: #c00;
+}
+
+.mortgage-info a {
+  color: #c00;
+  font-size: 18px; /* Increased from 14px */
+}
+
+/* ===================== */
+/* Navigation Styles */
+/* ===================== */
+
+.main-nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e3000f;
+  color: #fff;
+  padding: 15px 30px; /* Increased padding for larger nav */
+}
+
+.house-logo {
+  height: 40px; /* Increased height */
+  margin-right: 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Increased gap between menu items */
+}
+
+.nav-menu li {
+  cursor: pointer;
+  padding: 8px 15px; /* Increased padding for menu items */
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 16px; /* Increased font size */
+}
+
+.nav-menu li.active,
+.nav-menu li:hover {
+  background: #c00;
+}
+
+.nav-right a {
+  color: #fff;
+  margin-right: 15px; /* Increased margin */
+  font-size: 16px; /* Increased font size */
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: #d4d4d4;
+}
+
+/* ===================== */
+/* Search Section Styles */
+/* ===================== */
+
+.search-section {
+  grid-area: search;
+  background: #f9f9f9;
+  padding: 20px 30px; /* Increased padding */
+  border: 4px solid red; /* Thicker red border */
+  border-radius: 8px;
+  margin: 20px; /* Added margin for spacing */
+}
+
+.search-bar {
+  display: flex;
+  gap: 15px; /* Increased gap between elements */
+  flex-wrap: wrap;
+  margin-bottom: 15px; /* Increased bottom margin */
+}
+
+.search-bar select,
+.search-bar input {
+  padding: 10px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px; /* Adjusted flex properties for larger inputs */
+}
+
+.search-bar input {
+  flex: 2 1 400px; /* Wider input field */
+}
+
+.search-bar button {
+  flex: 0 1 auto;
+  padding: 10px 20px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+}
+
+.highlighted-text {
+  font-size: 18px; /* Increased font size */
+  color: #555;
+  border: 4px solid red; /* Thicker red border */
+  padding: 15px; /* Increased padding */
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center; /* Centered text */
+  max-width: 600px; /* Set max-width for better readability */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* ===================== */
+/* Associated Sites Styles */
+/* ===================== */
+
+.associated-sites {
+  grid-area: assoc;
+  display: flex;
+  gap: 25px; /* Increased gap between associated sites */
+  padding: 20px 30px; /* Increased padding */
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px; /* Added margin for spacing */
+}
+
+.associated-sites a {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap */
+  color: #000;
+  font-weight: bold;
+  flex: 1 1 250px; /* Increased flex basis for larger links */
+  padding: 15px; /* Increased padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background 0.3s, border 0.3s;
+  font-size: 16px; /* Increased font size */
+}
+
+.associated-sites a:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.associated-sites img {
+  width: 60px; /* Increased image size */
+  height: 60px; /* Increased image size */
+  object-fit: contain;
+}
+
+/* ===================== */
+/* Main Content Styles */
+/* ===================== */
+
+.main-content {
+  grid-area: main;
+  padding: 25px 40px; /* Increased padding */
+}
+
+/* Search Companies Section */
+.companies-search-section {
+  margin-bottom: 40px; /* Increased margin */
+  border: 4px solid red; /* Thicker red border */
+  padding: 20px; /* Increased padding */
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.companies-search-section h2 {
+  margin-bottom: 20px; /* Increased bottom margin */
+  font-size: 24px; /* Increased font size */
+  color: #e3000f;
+  text-align: center; /* Centered heading */
+}
+
+.companies-search-bar {
+  display: flex;
+  gap: 15px; /* Increased gap */
+  flex-wrap: wrap;
+  justify-content: center; /* Center the search bar */
+}
+
+.companies-search-bar input {
+  flex: 1 1 250px; /* Wider input field */
+  padding: 10px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.companies-search-bar button {
+  flex: 0 1 auto;
+  padding: 10px 25px; /* Increased padding */
+  font-size: 16px; /* Increased font size */
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.companies-search-bar button:hover {
+  background: #0069d9;
+}
+
+/* Companies Section */
+.companies-section {
+  margin-bottom: 50px; /* Increased margin */
+}
+
+.companies-section h2 {
+  margin-bottom: 25px; /* Increased bottom margin */
+  font-size: 28px; /* Increased font size */
+  color: #e3000f;
+  text-align: center; /* Centered heading */
+}
+
+/* Reuse the listings-grid and listing-card styles */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width for larger cards */
+  gap: 25px; /* Increased gap */
+}
+
+.listings-grid .listing-card {
+  background: #fff;
+  border: 2px solid #ddd; /* Thicker border */
+  border-radius: 6px; /* Slightly larger border-radius */
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s; /* Added transform for hover effect */
+}
+
+.listings-grid .listing-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.listings-grid .listing-card img {
+  width: 100%;
+  height: 200px; /* Increased image height */
+  object-fit: cover;
+}
+
+.listings-grid .listing-card .info {
+  padding: 15px; /* Increased padding */
+}
+
+.listings-grid .listing-card .info h3 {
+  margin: 10px 0; /* Increased margin */
+  font-size: 20px; /* Increased font size */
+  color: #c00;
+}
+
+.listings-grid .listing-card .info p {
+  font-size: 16px; /* Increased font size */
+  color: #555;
+}
+
+/* Specific styles for Companies listing cards */
+.companies-section .listing-card img {
+  height: 150px; /* Increased image height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.companies-section .listing-card .info h3 {
+  font-size: 18px; /* Increased font size */
+}
+
+.companies-section .listing-card .info p {
+  font-size: 14px; /* Increased font size */
+  color: #777;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 25px; /* Increased margin */
+  display: flex;
+  gap: 15px; /* Increased gap */
+  justify-content: center; /* Center the buttons */
+}
+
+/* ===================== */
+/* Property Listings Styles */
+/* ===================== */
+
+.property-listings {
+  margin-bottom: 60px; /* Increased margin */
+}
+
+.property-listings h2 {
+  margin-bottom: 25px; /* Increased bottom margin */
+  font-size: 28px; /* Increased font size */
+  color: #e3000f;
+  text-align: center; /* Centered heading */
+}
+
+/* The .listings-grid and .listing-card classes are reused */
+
+/* See All Links */
+.see-all,
+.see-all-sidebar {
+  display: inline-block;
+  margin-top: 20px; /* Increased margin */
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px; /* Increased font size */
+  transition: color 0.3s;
+}
+
+.see-all:hover,
+.see-all-sidebar:hover {
+  color: #0056b3;
+}
+
+/* ===================== */
+/* Sidebar Styles */
+/* ===================== */
+
+.sidebar {
+  grid-area: sidebar;
+  background: #f0f0f0;
+  padding: 25px 35px; /* Increased padding */
+  border-left: 1px solid #ddd;
+}
+
+/* Existing New Car Offer Ad */
+.sidebar-ad.top-ad {
+  background: #fff;
+  padding: 20px; /* Increased padding */
+  margin-bottom: 25px; /* Increased margin */
+  text-align: center;
+  border: 2px solid #ddd; /* Thicker border */
+  border-radius: 6px; /* Increased border-radius */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.sidebar-ad.top-ad:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.sidebar-ad.top-ad img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.sidebar-ad.top-ad p {
+  font-size: 16px; /* Increased font size */
+  color: #555;
+}
+
+/* Featured Properties Section */
+.sidebar-ad.properties-ad {
+  background: #fff;
+  padding: 20px; /* Increased padding */
+  margin-bottom: 25px; /* Increased margin */
+  border: 2px solid #ddd; /* Thicker border */
+  border-radius: 6px; /* Increased border-radius */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.sidebar-ad.properties-ad:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.sidebar-ad.properties-ad h3 {
+  font-size: 20px; /* Increased font size */
+  color: #e3000f;
+  margin-bottom: 15px; /* Increased margin */
+  text-align: center;
+}
+
+.sidebar-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for sidebar */
+  gap: 15px; /* Increased gap */
+}
+
+.sidebar-featured-grid .listing-card {
+  height: auto;
+}
+
+.sidebar-featured-grid .listing-card img {
+  height: 150px; /* Increased image height */
+  object-fit: cover;
+}
+
+.sidebar-featured-grid .listing-card .info {
+  padding: 10px; /* Increased padding */
+}
+
+.sidebar-featured-grid .listing-card .info h3 {
+  font-size: 18px; /* Increased font size */
+  color: #c00;
+}
+
+.sidebar-featured-grid .listing-card .info p {
+  font-size: 14px; /* Increased font size */
+  color: #555;
+}
+
+.see-all-sidebar {
+  display: block;
+  margin-top: 15px; /* Increased margin */
+  text-align: center;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px; /* Increased font size */
+  transition: color 0.3s;
+}
+
+.see-all-sidebar:hover {
+  color: #0056b3;
+}
+
+/* Telegram Bot Ad */
+.sidebar-ad.bot-ad {
+  background: #fff;
+  padding: 20px; /* Increased padding */
+  text-align: center;
+  border: 2px solid #ddd; /* Thicker border */
+  border-radius: 6px; /* Increased border-radius */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.sidebar-ad.bot-ad:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.sidebar-ad.bot-ad h3 {
+  font-size: 20px; /* Increased font size */
+  color: #e3000f;
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.sidebar-ad.bot-ad p {
+  font-size: 16px; /* Increased font size */
+  color: #555;
+}
+
+/* ===================== */
+/* Footer Styles */
+/* ===================== */
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 20px 30px; /* Increased padding */
+  background: #eee;
+  font-size: 16px; /* Increased font size */
+  color: #555;
+}
+
+/* ===================== */
+/* Responsive Styles */
+/* ===================== */
+
+@media (max-width: 1200px) {
+  .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted min-width */
+  }
+
+  .companies-list {
+      gap: 15px;
+  }
+
+  .company-card img {
+      width: 80px;
+      height: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+      grid-template-areas:
+        "header"
+        "nav"
+        "search"
+        "assoc"
+        "main"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+  }
+
+  .associated-sites {
+      justify-content: center;
+  }
+
+  .main-content {
+      padding: 20px; /* Maintained increased padding */
+  }
+
+  .sidebar {
+      padding: 20px; /* Maintained increased padding */
+      border-left: none;
+      border-top: 1px solid #ddd;
+  }
+
+  .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted min-width for larger cards */
+  }
+
+  .companies-section h2,
+  .property-listings h2 {
+      font-size: 24px; /* Maintained increased font size */
+  }
+
+  /* Adjust new companies search section */
+  .companies-search-section h2 {
+      font-size: 22px; /* Slight increase for better visibility */
+  }
+
+  .companies-search-bar input {
+      flex: 1 1 100%;
+  }
+
+  .companies-search-bar button {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+      flex-direction: column;
+  }
+
+  .search-bar select,
+  .search-bar input,
+  .search-bar button {
+      flex: 1 1 100%;
+  }
+
+  .nav-menu {
+      flex-wrap: wrap;
+      gap: 5px;
+  }
+
+  .nav-menu li {
+      padding: 5px;
+      font-size: 14px;
+  }
+
+  .companies-list {
+      gap: 10px;
+  }
+
+  .company-card img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for smaller screens */
+  }
+
+  .sidebar-property-card {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .sidebar-property-card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .sidebar-property-card .property-info h4 {
+      font-size: 14px;
+  }
+
+  .sidebar-property-card .property-info p {
+      font-size: 12px;
+  }
+
+  /* Adjust companies search section for smaller screens */
+  .companies-search-section {
+      margin-bottom: 25px; /* Reduced margin */
+  }
+
+  .companies-search-bar {
+      flex-direction: column;
+  }
+
+  .companies-search-bar input,
+  .companies-search-bar button {
+      flex: 1 1 100%;
+  }
+
+  /* Adjust Featured Properties in Sidebar */
+  .sidebar-featured-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+  }
+
+  .sidebar-featured-grid .listing-card img {
+      height: 120px;
+  }
+
+  .sidebar-featured-grid .listing-card .info h3 {
+      font-size: 16px;
+  }
+
+  .sidebar-featured-grid .listing-card .info p {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .associated-sites a {
+      flex: 1 1 100%;
+  }
+
+  .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Further adjusted min-width */
+  }
+}
+
+/* ===================== */
+/* Map Section Styles */
+/* ===================== */
+
+.map-section {
+  margin-bottom: 60px; /* Increased margin for spacing */
+  padding: 20px 40px; /* Increased padding */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.map-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px; /* Consistent with other section headings */
+  color: #e3000f;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}

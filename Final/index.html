@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>House.kg - Real Estate in Kyrgyzstan</title>
+  
+  <!-- Default Stylesheet -->
+  <link id="theme-style" rel="stylesheet" href="styles.css"/>
+  
+  <!-- Alternate Stylesheet (Disabled by Default) -->
+  <link id="alternate-style" rel="stylesheet" href="styles2.css" disabled/>
+</head>
+<body>
+
+  <!-- Top Header Section -->
+  <header class="top-header">
+    <div class="top-header__content">
+      <img src="images/demirbank_54.png" alt="DemirBank Logo" class="demir-logo">
+      <div class="mortgage-info">
+        <h1>ИПОТЕКА</h1>
+        <a href="http://www.ipotekademir.kg" target="_blank">www.ipotekademir.kg</a>
+      </div>
+      
+      <!-- Design Switcher Button -->
+      <button id="design-switcher" class="btn blue" style="margin-left: auto;">Switch Design</button>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-left">
+      <img src="images/housekg.png" alt="House.kg" class="house-logo">
+      <ul class="nav-menu">
+        <li class="active">Sale</li>
+        <li>Rent</li>
+        <li>On the map</li>
+        <li>Real Estate Verification</li>
+        <li>Daily</li>
+        <li>Companies</li>
+        <li>New buildings</li>
+        <li>Analytics</li>
+        <li>Urgently</li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="#">ENG</a>
+      <a href="#">Login</a>
+      <a href="#">Registration</a>
+      <button class="btn green">To add an advert</button>
+    </div>
+  </nav>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="search-bar">
+      <select name="deal" id="deal-type">
+        <option value="buy">Buy</option>
+        <option value="rent">Rent</option>
+      </select>
+      <select name="property-type" id="property-type">
+        <option value="all">Property type</option>
+        <option value="apartment">Apartment</option>
+        <option value="house">House</option>
+      </select>
+      <select name="rooms" id="rooms">
+        <option value="">Number of rooms</option>
+        <option value="1">1 room</option>
+        <option value="2">2 rooms</option>
+        <option value="3">3 rooms</option>
+      </select>
+      <input type="text" placeholder="I'm looking for...">
+      <button class="btn red">To show on the map</button>
+      <button class="btn green">Find</button>
+    </div>
+    <p class="highlighted-text">Sell and buy real estate in Kyrgyzstan</p>
+  </section>
+
+  <!-- Associated Sites Section -->
+  <section class="associated-sites">
+    <a href="https://bazar.kg" target="_blank" class="bazar-link">
+      <img src="images/bazar.jpg" alt="bazar.kg">
+      <span>Продавай и покупай легко</span>
+    </a>
+    <a href="https://mashina.kg" target="_blank" class="mashina-link">
+      <img src="images/mashina.jpg" alt="mashina.kg">
+      <span>Новый автомобиль на выгодных условиях</span>
+    </a>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Search Companies Section -->
+    <section class="companies-search-section">
+      <h2>Search Companies</h2>
+      <div class="companies-search-bar">
+        <input type="text" placeholder="Search for a company...">
+        <button class="btn blue">Search</button>
+      </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section class="companies-section">
+      <h2>Companies</h2>
+      <div class="listings-grid">
+        <!-- Existing Companies -->
+        <div class="listing-card">
+          <img src="images/elite ned.jpg" alt="Elite Ned">
+          <div class="info">
+            <h3>Golden House</h3>
+            <p>267 ads</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/этажи.jpg" alt="Этажи">
+          <div class="info">
+            <h3>Этажи</h3>
+            <p>883 ads</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/borbor.jpg" alt="Borbor Real Estate">
+          <div class="info">
+            <h3>Borbor Real Estate</h3>
+            <p>402 ads</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/amanat.jpg" alt="Amanat Invest">
+          <div class="info">
+            <h3>Amanat Invest</h3>
+            <p>477 ads</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/mega.jpg" alt="Mega House">
+          <div class="info">
+            <h3>Bishkek Real Estate</h3>
+            <p>234 ads</p>
+          </div>
+        </div>
+        <!-- **Additional Companies** -->
+        <div class="listing-card">
+          <img src="images/nomad.jpg" alt="Nomad Realty">
+          <div class="info">
+            <h3>Nomad Realty</h3>
+            <p>320 ads</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/expert.jpg" alt="Expert Properties">
+          <div class="info">
+            <h3>Expert Properties</h3>
+            <p>150 ads</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta-buttons">
+        <button class="btn blue">Create a Business Account</button>
+        <button class="btn blue-outline">Request a Call Back</button>
+      </div>
+    </section>
+
+    <!-- Property For Sale Section -->
+    <section class="property-listings">
+      <h2>Property For Sale</h2>
+      <div class="listings-grid">
+        <!-- Existing Properties -->
+        <div class="listing-card">
+          <img src="images/prop1.jpg" alt="Property 1">
+          <div class="info">
+            <h3>$210,000 • Bishkek</h3>
+            <p>4-room sq., 210 m², 1st floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop2.jpg" alt="Property 2">
+          <div class="info">
+            <h3>$14,000 • With Kuntuu</h3>
+            <p>House, 1 room, 20 m²</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop3.jpg" alt="Property 3">
+          <div class="info">
+            <h3>$27,000 • Bishkek</h3>
+            <p>1-room sq., 38 m², 7th floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop4.jpg" alt="Property 4">
+          <div class="info">
+            <h3>$38,000 • Bishkek</h3>
+            <p>3-room sq., 100 m², 1st floor of 4</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop5.jpg" alt="Property 5">
+          <div class="info">
+            <h3>$109,500 • Bishkek</h3>
+            <p>3-room sq., 103 m², 1st floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop6.jpg" alt="Property 6">
+          <div class="info">
+            <h3>$74,877 • Bishkek</h3>
+            <p>3-room sq., 102 m², 12th floor</p>
+          </div>
+        </div>
+        <!-- **Additional Properties** -->
+        <div class="listing-card">
+          <img src="images/prop7.jpg" alt="Property 7">
+          <div class="info">
+            <h3>$250,000 • Osh</h3>
+            <p>5-room sq., 250 m², 2nd floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop8.jpg" alt="Property 8">
+          <div class="info">
+            <h3>$180,000 • Jalal-Abad</h3>
+            <p>3-room sq., 180 m², 3rd floor</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-all">All ads for sale</a>
+    </section>
+
+    <!-- **Map Section Added Below** -->
+    <section class="map-section">
+      <h2>Explore Properties on the Map</h2>
+      <div class="map-container">
+        <!-- Google Maps Embed -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.996147677586!2d74.58314271530853!3d42.87462167918468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec5a21f0f4d53%3A0x8a8a8a8a8a8a8a8a!2z0J_RgNC40LXQuNC-0YHRg9C40YfQuSDQk9C40YfQuNGP0JrQuNGPINC_0LDQvtC00YDQuNGP!5e0!3m2!1sru!2skg!4v1697592000000!5m2!1sru!2skg"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+    <!-- **End of Map Section** -->
+
+    <!-- Property For Rent Section -->
+    <section class="property-listings">
+      <h2>Property For Rent</h2>
+      <div class="listings-grid">
+        <!-- Existing Properties -->
+        <div class="listing-card">
+          <img src="images/prop7.jpg" alt="Property 7">
+          <div class="info">
+            <h3>$1,200/month • Osh</h3>
+            <p>2-room sq., 85 m², 3rd floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop8.jpg" alt="Property 8">
+          <div class="info">
+            <h3>$800/month • Jalal-Abad</h3>
+            <p>Studio, 45 m², Ground floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop9.jpg" alt="Property 9">
+          <div class="info">
+            <h3>$950/month • Bishkek</h3>
+            <p>3-room sq., 120 m², 5th floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop10.jpg" alt="Property 10">
+          <div class="info">
+            <h3>$700/month • Karakol</h3>
+            <p>1-room sq., 60 m², 2nd floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop11.jpg" alt="Property 11">
+          <div class="info">
+            <h3>$1,500/month • Naryn</h3>
+            <p>4-room sq., 150 m², 4th floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop12.jpg" alt="Property 12">
+          <div class="info">
+            <h3>$1,000/month • Tokmok</h3>
+            <p>2-room sq., 90 m², 6th floor</p>
+          </div>
+        </div>
+        <!-- **Additional Properties** -->
+        <div class="listing-card">
+          <img src="images/propnew.jpg" alt="Property 13">
+          <div class="info">
+            <h3>$1,300/month • Talas</h3>
+            <p>3-room sq., 110 m², 5th floor</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/propnew2.jpg" alt="Property 14">
+          <div class="info">
+            <h3>$900/month • Issyk-Kul</h3>
+            <p>2-room sq., 75 m², 4th floor</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-all">All ads for rent</a>
+    </section>
+  </main>
+
+  <!-- Sidebar Section -->
+  <aside class="sidebar">
+    <!-- New Car Offer Ad -->
+    <div class="sidebar-ad top-ad">
+      <img src="images/mashina.jpg" alt="New Car Offer">
+      <p>Новый автомобиль на выгодных условиях</p>
+    </div>
+
+    <!-- Featured Properties Section -->
+    <div class="sidebar-ad properties-ad">
+      <h3>Featured Properties</h3>
+      <div class="listings-grid sidebar-featured-grid">
+        <div class="listing-card">
+          <img src="images/prop13.jpg" alt="Property 13">
+          <div class="info">
+            <h3>$120,000 • Bishkek</h3>
+            <p>3-room sq., 120 m²</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop14.jpg" alt="Property 14">
+          <div class="info">
+            <h3>$85,000 • Osh</h3>
+            <p>2-room sq., 80 m²</p>
+          </div>
+        </div>
+        <div class="listing-card">
+          <img src="images/prop15.jpg" alt="Property 15">
+          <div class="info">
+            <h3>$95,000 • Jalal-Abad</h3>
+            <p>1-room sq., 60 m²</p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="see-all-sidebar">See All Properties</a>
+    </div>
+
+    <!-- Telegram Bot Ad -->
+    <div class="sidebar-ad bot-ad">
+      <h3>Телеграмм бот</h3>
+      <p>Телеграмм бот для Риэлторов<br>Узнай первым о новых квартирах на рынке!</p>
+    </div>
+  </aside>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2024 House.kg - Sell and Buy Real Estate in Kyrgyzstan</p>
+  </footer>
+
+  <!-- JavaScript to Handle Design Switching -->
+  <script>
+    const switcherButton = document.getElementById('design-switcher');
+    const themeStyle = document.getElementById('theme-style');
+    const alternateStyle = document.getElementById('alternate-style');
+
+    // Function to Switch Styles
+    const switchStyle = () => {
+      if (alternateStyle.disabled) {
+        // Switch to Alternate Style
+        alternateStyle.disabled = false;
+        themeStyle.disabled = true;
+        switcherButton.textContent = 'Default Design';
+        localStorage.setItem('theme', 'alternate');
+      } else {
+        // Switch Back to Default Style
+        alternateStyle.disabled = true;
+        themeStyle.disabled = false;
+        switcherButton.textContent = 'Switch Design';
+        localStorage.setItem('theme', 'default');
+      }
+    };
+
+    // Event Listener for the Switcher Button
+    switcherButton.addEventListener('click', switchStyle);
+
+    // Check Local Storage on Page Load to Persist Theme Choice
+    window.addEventListener('DOMContentLoaded', () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'alternate') {
+        alternateStyle.disabled = false;
+        themeStyle.disabled = true;
+        switcherButton.textContent = 'Default Design';
+      } else {
+        alternateStyle.disabled = true;
+        themeStyle.disabled = false;
+        switcherButton.textContent = 'Switch Design';
+      }
+    });
+  </script>
+</body>
+</html>
