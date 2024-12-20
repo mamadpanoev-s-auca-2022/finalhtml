@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>House.kg - Real Estate in Kyrgyzstan</title>
   
-  <!-- Default Stylesheet -->
   <link id="default-style" rel="stylesheet" href="styles.css"/>
-  
-  <!-- Alternate Stylesheet for New Design -->
   <link id="new-design-style" rel="stylesheet" href="styles2.css" disabled />
 </head>
 <body>
 
-  <!-- Top Header Section -->
   <header class="top-header">
     <div class="top-header__content">
       <img src="images/demirbank_54.png" alt="DemirBank Logo" class="demir-logo">
@@ -22,15 +18,11 @@
         <a href="http://www.ipotekademir.kg" target="_blank">www.ipotekademir.kg</a>
       </div>
       
-      <!-- Design Switcher Button -->
       <button id="design-switcher" class="btn blue" style="margin-left: auto;">Switch Design</button>
-      
-      <!-- Theme Switcher Button -->
       <button id="theme-switcher" class="btn green" style="margin-left: 10px;">Switch Theme</button>
     </div>
   </header>
 
-  <!-- Navigation Bar -->
   <nav class="main-nav">
     <div class="nav-left">
       <img src="images/housekg.png" alt="House.kg" class="house-logo">
@@ -54,7 +46,6 @@
     </div>
   </nav>
 
-  <!-- Search Section -->
   <section class="search-section">
     <div class="search-bar">
       <select name="deal" id="deal-type">
@@ -79,7 +70,6 @@
     <p class="highlighted-text">Sell and buy real estate in Kyrgyzstan</p>
   </section>
 
-  <!-- Associated Sites Section -->
   <section class="associated-sites">
     <a href="https://bazar.kg" target="_blank" class="bazar-link">
       <img src="images/bazar.jpg" alt="bazar.kg">
@@ -91,9 +81,7 @@
     </a>
   </section>
 
-  <!-- Main Content Area -->
   <main class="main-content">
-    <!-- Search Companies Section -->
     <section class="companies-search-section">
       <h2>Search Companies</h2>
       <div class="companies-search-bar">
@@ -102,11 +90,9 @@
       </div>
     </section>
 
-    <!-- Companies Section -->
     <section class="companies-section">
       <h2>Companies</h2>
       <div class="listings-grid">
-        <!-- Existing Companies -->
         <div class="listing-card">
           <img src="images/elite ned.jpg" alt="Elite Ned">
           <div class="info">
@@ -142,7 +128,6 @@
             <p>234 ads</p>
           </div>
         </div>
-        <!-- Additional Companies -->
         <div class="listing-card">
           <img src="images/nomad.jpg" alt="Nomad Realty">
           <div class="info">
@@ -164,7 +149,6 @@
       </div>
     </section>
 
-    <!-- Property For Sale Section -->
     <section class="property-listings">
       <h2>Property For Sale</h2>
       <div class="listings-grid">
@@ -210,7 +194,6 @@
             <p>3-room sq., 102 m², 12th floor</p>
           </div>
         </div>
-        <!-- Additional Properties -->
         <div class="listing-card">
           <img src="images/prop7.jpg" alt="Property 7">
           <div class="info">
@@ -229,7 +212,6 @@
       <a href="#" class="see-all">All ads for sale</a>
     </section>
 
-    <!-- Map Section -->
     <section class="map-section">
       <h2>Explore Properties on the Map</h2>
       <div class="map-container">
@@ -245,7 +227,6 @@
       </div>
     </section>
 
-    <!-- Property For Rent Section -->
     <section class="property-listings">
       <h2>Property For Rent</h2>
       <div class="listings-grid">
@@ -291,7 +272,6 @@
             <p>2-room sq., 90 m², 6th floor</p>
           </div>
         </div>
-        <!-- Additional Properties -->
         <div class="listing-card">
           <img src="images/propnew.jpg" alt="Property 13">
           <div class="info">
@@ -311,15 +291,12 @@
     </section>
   </main>
 
-  <!-- Sidebar Section -->
   <aside class="sidebar">
-    <!-- New Car Offer Ad -->
     <div class="sidebar-ad top-ad">
       <img src="images/mashina.jpg" alt="New Car Offer">
       <p>Новый автомобиль на выгодных условиях</p>
     </div>
 
-    <!-- Featured Properties Section -->
     <div class="sidebar-ad properties-ad">
       <h3>Featured Properties</h3>
       <div class="listings-grid sidebar-featured-grid">
@@ -348,19 +325,16 @@
       <a href="#" class="see-all-sidebar">See All Properties</a>
     </div>
 
-    <!-- Telegram Bot Ad -->
     <div class="sidebar-ad bot-ad">
       <h3>Телеграмм бот</h3>
       <p>Телеграмм бот для Риэлторов<br>Узнай первым о новых квартирах на рынке!</p>
     </div>
   </aside>
 
-  <!-- Footer Section -->
   <footer class="footer">
     <p>© 2024 House.kg - Sell and Buy Real Estate in Kyrgyzstan</p>
   </footer>
 
-  <!-- JavaScript for Theme and Design Switching -->
   <script>
     const designSwitcherButton = document.getElementById('design-switcher');
     const themeSwitcherButton = document.getElementById('theme-switcher');
@@ -368,39 +342,31 @@
     const newDesignStyle = document.getElementById('new-design-style');
     const body = document.body;
   
-    // Theme State
     let isDarkMode = false;
-    // Design State
     let isDefaultDesign = true;
   
-    // Function to switch designs
     function switchDesign() {
       if (isDefaultDesign) {
         newDesignStyle.disabled = false;
         defaultStyle.disabled = true;
         designSwitcherButton.textContent = 'Default Design';
-        themeSwitcherButton.style.display = 'none'; // Hide theme switcher
-        // Add namespace class
+        themeSwitcherButton.style.display = 'none';
         body.classList.add('new-design');
-        // Optionally reset theme when switching designs
         isDarkMode = false;
         body.classList.remove('dark-mode');
       } else {
         newDesignStyle.disabled = true;
         defaultStyle.disabled = false;
         designSwitcherButton.textContent = 'Switch Design';
-        themeSwitcherButton.style.display = 'inline-block'; // Show theme switcher
-        // Remove namespace class
+        themeSwitcherButton.style.display = 'inline-block';
         body.classList.remove('new-design');
       }
       isDefaultDesign = !isDefaultDesign;
-      // Save design preference
       localStorage.setItem('design', isDefaultDesign ? 'default' : 'new');
     }
   
-    // Function to switch themes within the default design
     function switchTheme() {
-      if (isDefaultDesign) { // Only allow theme switching in default design
+      if (isDefaultDesign) {
         isDarkMode = !isDarkMode;
         if (isDarkMode) {
           body.classList.add('dark-mode');
@@ -414,11 +380,9 @@
       }
     }
   
-    // Event Listeners
     designSwitcherButton.addEventListener('click', switchDesign);
     themeSwitcherButton.addEventListener('click', switchTheme);
   
-    // On page load, check localStorage for design and theme
     window.addEventListener('DOMContentLoaded', () => {
       const savedDesign = localStorage.getItem('design');
       if (savedDesign === 'new') {
