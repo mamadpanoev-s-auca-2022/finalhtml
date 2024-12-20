@@ -6,10 +6,10 @@
   <title>House.kg - Real Estate in Kyrgyzstan</title>
   
   <!-- Default Stylesheet -->
-  <link id="theme-style" rel="stylesheet" href="styles.css"/>
+  <link id="default-style" rel="stylesheet" href="styles.css"/>
   
-  <!-- Alternate Stylesheet (Disabled by Default) -->
-  <link id="alternate-style" rel="stylesheet" href="styles2.css" disabled/>
+  <!-- Alternate Stylesheet for New Design -->
+  <link id="new-design-style" rel="stylesheet" href="styles2.css" disabled />
 </head>
 <body>
 
@@ -24,6 +24,9 @@
       
       <!-- Design Switcher Button -->
       <button id="design-switcher" class="btn blue" style="margin-left: auto;">Switch Design</button>
+      
+      <!-- Theme Switcher Button -->
+      <button id="theme-switcher" class="btn green" style="margin-left: 10px;">Switch Theme</button>
     </div>
   </header>
 
@@ -139,7 +142,7 @@
             <p>234 ads</p>
           </div>
         </div>
-        <!-- **Additional Companies** -->
+        <!-- Additional Companies -->
         <div class="listing-card">
           <img src="images/nomad.jpg" alt="Nomad Realty">
           <div class="info">
@@ -165,7 +168,6 @@
     <section class="property-listings">
       <h2>Property For Sale</h2>
       <div class="listings-grid">
-        <!-- Existing Properties -->
         <div class="listing-card">
           <img src="images/prop1.jpg" alt="Property 1">
           <div class="info">
@@ -208,7 +210,7 @@
             <p>3-room sq., 102 m², 12th floor</p>
           </div>
         </div>
-        <!-- **Additional Properties** -->
+        <!-- Additional Properties -->
         <div class="listing-card">
           <img src="images/prop7.jpg" alt="Property 7">
           <div class="info">
@@ -227,11 +229,10 @@
       <a href="#" class="see-all">All ads for sale</a>
     </section>
 
-    <!-- **Map Section Added Below** -->
+    <!-- Map Section -->
     <section class="map-section">
       <h2>Explore Properties on the Map</h2>
       <div class="map-container">
-        <!-- Google Maps Embed -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.996147677586!2d74.58314271530853!3d42.87462167918468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec5a21f0f4d53%3A0x8a8a8a8a8a8a8a8a!2z0J_RgNC40LXQuNC-0YHRg9C40YfQuSDQk9C40YfQuNGP0JrQuNGPINC_0LDQvtC00YDQuNGP!5e0!3m2!1sru!2skg!4v1697592000000!5m2!1sru!2skg"
           width="100%"
@@ -243,13 +244,11 @@
         </iframe>
       </div>
     </section>
-    <!-- **End of Map Section** -->
 
     <!-- Property For Rent Section -->
     <section class="property-listings">
       <h2>Property For Rent</h2>
       <div class="listings-grid">
-        <!-- Existing Properties -->
         <div class="listing-card">
           <img src="images/prop7.jpg" alt="Property 7">
           <div class="info">
@@ -292,7 +291,7 @@
             <p>2-room sq., 90 m², 6th floor</p>
           </div>
         </div>
-        <!-- **Additional Properties** -->
+        <!-- Additional Properties -->
         <div class="listing-card">
           <img src="images/propnew.jpg" alt="Property 13">
           <div class="info">
@@ -361,43 +360,90 @@
     <p>© 2024 House.kg - Sell and Buy Real Estate in Kyrgyzstan</p>
   </footer>
 
-  <!-- JavaScript to Handle Design Switching -->
+  <!-- JavaScript for Theme and Design Switching -->
   <script>
-    const switcherButton = document.getElementById('design-switcher');
-    const themeStyle = document.getElementById('theme-style');
-    const alternateStyle = document.getElementById('alternate-style');
-
-    // Function to Switch Styles
-    const switchStyle = () => {
-      if (alternateStyle.disabled) {
-        // Switch to Alternate Style
-        alternateStyle.disabled = false;
-        themeStyle.disabled = true;
-        switcherButton.textContent = 'Default Design';
-        localStorage.setItem('theme', 'alternate');
+    const designSwitcherButton = document.getElementById('design-switcher');
+    const themeSwitcherButton = document.getElementById('theme-switcher');
+    const defaultStyle = document.getElementById('default-style');
+    const newDesignStyle = document.getElementById('new-design-style');
+    const body = document.body;
+  
+    // Theme State
+    let isDarkMode = false;
+    // Design State
+    let isDefaultDesign = true;
+  
+    // Function to switch designs
+    function switchDesign() {
+      if (isDefaultDesign) {
+        newDesignStyle.disabled = false;
+        defaultStyle.disabled = true;
+        designSwitcherButton.textContent = 'Default Design';
+        themeSwitcherButton.style.display = 'none'; // Hide theme switcher
+        // Add namespace class
+        body.classList.add('new-design');
+        // Optionally reset theme when switching designs
+        isDarkMode = false;
+        body.classList.remove('dark-mode');
       } else {
-        // Switch Back to Default Style
-        alternateStyle.disabled = true;
-        themeStyle.disabled = false;
-        switcherButton.textContent = 'Switch Design';
-        localStorage.setItem('theme', 'default');
+        newDesignStyle.disabled = true;
+        defaultStyle.disabled = false;
+        designSwitcherButton.textContent = 'Switch Design';
+        themeSwitcherButton.style.display = 'inline-block'; // Show theme switcher
+        // Remove namespace class
+        body.classList.remove('new-design');
       }
-    };
-
-    // Event Listener for the Switcher Button
-    switcherButton.addEventListener('click', switchStyle);
-
-    // Check Local Storage on Page Load to Persist Theme Choice
+      isDefaultDesign = !isDefaultDesign;
+      // Save design preference
+      localStorage.setItem('design', isDefaultDesign ? 'default' : 'new');
+    }
+  
+    // Function to switch themes within the default design
+    function switchTheme() {
+      if (isDefaultDesign) { // Only allow theme switching in default design
+        isDarkMode = !isDarkMode;
+        if (isDarkMode) {
+          body.classList.add('dark-mode');
+          themeSwitcherButton.textContent = 'Light Mode';
+          localStorage.setItem('theme', 'dark');
+        } else {
+          body.classList.remove('dark-mode');
+          themeSwitcherButton.textContent = 'Dark Mode';
+          localStorage.setItem('theme', 'light');
+        }
+      }
+    }
+  
+    // Event Listeners
+    designSwitcherButton.addEventListener('click', switchDesign);
+    themeSwitcherButton.addEventListener('click', switchTheme);
+  
+    // On page load, check localStorage for design and theme
     window.addEventListener('DOMContentLoaded', () => {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'alternate') {
-        alternateStyle.disabled = false;
-        themeStyle.disabled = true;
-        switcherButton.textContent = 'Default Design';
+      const savedDesign = localStorage.getItem('design');
+      if (savedDesign === 'new') {
+        newDesignStyle.disabled = false;
+        defaultStyle.disabled = true;
+        designSwitcherButton.textContent = 'Default Design';
+        themeSwitcherButton.style.display = 'none';
+        body.classList.add('new-design');
       } else {
-        alternateStyle.disabled = true;
-        themeStyle.disabled = false;
-        switcherButton.textContent = 'Switch Design';
+        newDesignStyle.disabled = true;
+        defaultStyle.disabled = false;
+        designSwitcherButton.textContent = 'Switch Design';
+        themeSwitcherButton.style.display = 'inline-block';
+        body.classList.remove('new-design');
+      }
+  
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' && savedDesign !== 'new') {
+        isDarkMode = true;
+        body.classList.add('dark-mode');
+        themeSwitcherButton.textContent = 'Light Mode';
+      } else {
+        isDarkMode = false;
+        body.classList.remove('dark-mode');
+        themeSwitcherButton.textContent = 'Dark Mode';
       }
     });
   </script>
