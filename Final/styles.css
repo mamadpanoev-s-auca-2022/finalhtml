@@ -2,14 +2,12 @@
 /* Global Styles */
 /* ===================== */
 
-/* Reset default margins and paddings, set box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Apply global font and text color */
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -24,27 +22,134 @@ body {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto auto auto auto auto auto;
   min-height: 100vh;
+  background: #fdfdfd; /* Light background */
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Ensure images are responsive */
+.dark-mode {
+  background: #121212; /* Dark background */
+  color: #e0e0e0;
+}
+
+.dark-mode .top-header {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .mortgage-info h1,
+.dark-mode .mortgage-info a {
+  color: #ff6b6b;
+}
+
+.dark-mode .main-nav {
+  background: #333;
+}
+
+.dark-mode .nav-menu li.active,
+.dark-mode .nav-menu li:hover {
+  background: #555;
+}
+
+.dark-mode .nav-right a {
+  color: #e0e0e0;
+}
+
+.dark-mode .search-section {
+  background: #1e1e1e;
+  border: 4px solid #ff6b6b;
+}
+
+.dark-mode .highlighted-text {
+  background-color: #2c2c2c;
+  border: 4px solid #ff6b6b;
+  color: #e0e0e0;
+}
+
+.dark-mode .associated-sites {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.dark-mode .associated-sites a {
+  background: #2c2c2c;
+  border: 1px solid #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .associated-sites a:hover {
+  background: #3a3a3a;
+  border-color: #444;
+}
+
+.dark-mode .companies-search-section,
+.dark-mode .companies-section,
+.dark-mode .property-listings,
+.dark-mode .map-section {
+  background-color: #1e1e1e;
+  border: 4px solid #ff6b6b;
+}
+
+.dark-mode .companies-search-section h2,
+.dark-mode .companies-section h2,
+.dark-mode .property-listings h2,
+.dark-mode .map-section h2 {
+  color: #ff6b6b;
+}
+
+.dark-mode .listings-grid .listing-card {
+  background: #2c2c2c;
+  border: 2px solid #444;
+}
+
+.dark-mode .listings-grid .listing-card .info h3 {
+  color: #ff6b6b;
+}
+
+.dark-mode .listings-grid .listing-card .info p {
+  color: #ccc;
+}
+
+.dark-mode .sidebar {
+  background: #1e1e1e;
+}
+
+.dark-mode .sidebar-ad.top-ad,
+.dark-mode .sidebar-ad.properties-ad,
+.dark-mode .sidebar-ad.bot-ad {
+  background: #2c2c2c;
+  border: 2px solid #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .sidebar-ad.top-ad p,
+.dark-mode .sidebar-ad.properties-ad p,
+.dark-mode .sidebar-ad.bot-ad p {
+  color: #ccc;
+}
+
+.dark-mode .footer {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+/* Global Elements */
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Remove default link styles and inherit color */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Button Styles */
 .btn {
-  padding: 12px 20px; /* Increased padding for larger buttons */
+  padding: 12px 20px;
   border: none;
   cursor: pointer;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   border-radius: 4px;
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
@@ -79,7 +184,7 @@ a {
 .btn.blue-outline {
   background: transparent;
   color: #007bff;
-  border: 2px solid #007bff; /* Increased border thickness */
+  border: 2px solid #007bff;
 }
 
 .btn.blue-outline:hover {
@@ -95,28 +200,28 @@ a {
   grid-area: header;
   background: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 20px 40px; /* Increased padding for a larger header */
+  padding: 20px 40px;
 }
 
 .top-header__content {
   display: flex;
   align-items: center;
-  gap: 40px; /* Increased spacing between elements */
+  gap: 40px;
 }
 
 .demir-logo {
-  max-height: 70px; /* Increased logo size */
+  max-height: 70px;
 }
 
 .mortgage-info h1 {
   margin: 0;
-  font-size: 32px; /* Increased from 24px */
+  font-size: 32px;
   color: #c00;
 }
 
 .mortgage-info a {
   color: #c00;
-  font-size: 18px; /* Increased from 14px */
+  font-size: 18px;
 }
 
 /* ===================== */
@@ -130,11 +235,11 @@ a {
   align-items: center;
   background: #e3000f;
   color: #fff;
-  padding: 15px 30px; /* Increased padding for larger nav */
+  padding: 15px 30px;
 }
 
 .house-logo {
-  height: 40px; /* Increased height */
+  height: 40px;
   margin-right: 20px;
 }
 
@@ -146,15 +251,15 @@ a {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 15px; /* Increased gap between menu items */
+  gap: 15px;
 }
 
 .nav-menu li {
   cursor: pointer;
-  padding: 8px 15px; /* Increased padding for menu items */
+  padding: 8px 15px;
   border-radius: 4px;
   transition: background 0.3s;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
 }
 
 .nav-menu li.active,
@@ -164,8 +269,8 @@ a {
 
 .nav-right a {
   color: #fff;
-  margin-right: 15px; /* Increased margin */
-  font-size: 16px; /* Increased font size */
+  margin-right: 15px;
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -180,48 +285,48 @@ a {
 .search-section {
   grid-area: search;
   background: #f9f9f9;
-  padding: 20px 30px; /* Increased padding */
-  border: 4px solid red; /* Thicker red border */
+  padding: 20px 30px;
+  border: 4px solid red;
   border-radius: 8px;
-  margin: 20px; /* Added margin for spacing */
+  margin: 20px;
 }
 
 .search-bar {
   display: flex;
-  gap: 15px; /* Increased gap between elements */
+  gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 15px; /* Increased bottom margin */
+  margin-bottom: 15px;
 }
 
 .search-bar select,
 .search-bar input {
-  padding: 10px; /* Increased padding */
-  font-size: 16px; /* Increased font size */
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  flex: 1 1 200px; /* Adjusted flex properties for larger inputs */
+  flex: 1 1 200px;
 }
 
 .search-bar input {
-  flex: 2 1 400px; /* Wider input field */
+  flex: 2 1 400px;
 }
 
 .search-bar button {
   flex: 0 1 auto;
-  padding: 10px 20px; /* Increased padding */
-  font-size: 16px; /* Increased font size */
+  padding: 10px 20px;
+  font-size: 16px;
 }
 
 .highlighted-text {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
   color: #555;
-  border: 4px solid red; /* Thicker red border */
-  padding: 15px; /* Increased padding */
+  border: 4px solid red;
+  padding: 15px;
   border-radius: 4px;
   background-color: #fff;
-  text-align: center; /* Centered text */
-  max-width: 600px; /* Set max-width for better readability */
-  margin: 0 auto; /* Center the paragraph */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ===================== */
@@ -231,27 +336,27 @@ a {
 .associated-sites {
   grid-area: assoc;
   display: flex;
-  gap: 25px; /* Increased gap between associated sites */
-  padding: 20px 30px; /* Increased padding */
+  gap: 25px;
+  padding: 20px 30px;
   border-bottom: 1px solid #ddd;
   background: #fff;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px; /* Added margin for spacing */
+  margin: 20px;
 }
 
 .associated-sites a {
   display: flex;
   align-items: center;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
   color: #000;
   font-weight: bold;
-  flex: 1 1 250px; /* Increased flex basis for larger links */
-  padding: 15px; /* Increased padding */
+  flex: 1 1 250px;
+  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: background 0.3s, border 0.3s;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
 }
 
 .associated-sites a:hover {
@@ -260,8 +365,8 @@ a {
 }
 
 .associated-sites img {
-  width: 60px; /* Increased image size */
-  height: 60px; /* Increased image size */
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -271,50 +376,49 @@ a {
 
 .main-content {
   grid-area: main;
-  padding: 25px 40px; /* Increased padding */
+  padding: 25px 40px;
 }
 
 /* Search Companies Section */
 .companies-search-section {
-  margin-bottom: 40px; /* Increased margin */
-  border: 4px solid red; /* Thicker red border */
-  padding: 20px; /* Increased padding */
+  margin-bottom: 40px;
+  border: 4px solid red;
+  padding: 20px;
   border-radius: 8px;
   background-color: #fff;
 }
 
 .companies-search-section h2 {
-  margin-bottom: 20px; /* Increased bottom margin */
-  font-size: 24px; /* Increased font size */
+  margin-bottom: 20px;
+  font-size: 24px;
   color: #e3000f;
-  text-align: center; /* Centered heading */
+  text-align: center;
 }
 
 .companies-search-bar {
   display: flex;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
   flex-wrap: wrap;
-  justify-content: center; /* Center the search bar */
+  justify-content: center;
 }
 
 .companies-search-bar input {
-  flex: 1 1 250px; /* Wider input field */
-  padding: 10px; /* Increased padding */
-  font-size: 16px; /* Increased font size */
+  flex: 1 1 250px;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .companies-search-bar button {
   flex: 0 1 auto;
-  padding: 10px 25px; /* Increased padding */
-  font-size: 16px; /* Increased font size */
+  padding: 10px 25px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
   background: #007bff;
   color: #fff;
   border-radius: 4px;
-  transition: background 0.3s;
 }
 
 .companies-search-bar button:hover {
@@ -323,105 +427,97 @@ a {
 
 /* Companies Section */
 .companies-section {
-  margin-bottom: 50px; /* Increased margin */
+  margin-bottom: 50px;
 }
 
 .companies-section h2 {
-  margin-bottom: 25px; /* Increased bottom margin */
-  font-size: 28px; /* Increased font size */
+  margin-bottom: 25px;
+  font-size: 28px;
   color: #e3000f;
-  text-align: center; /* Centered heading */
+  text-align: center;
 }
 
-/* Reuse the listings-grid and listing-card styles */
 .listings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width for larger cards */
-  gap: 25px; /* Increased gap */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .listings-grid .listing-card {
   background: #fff;
-  border: 2px solid #ddd; /* Thicker border */
-  border-radius: 6px; /* Slightly larger border-radius */
+  border: 2px solid #ddd;
+  border-radius: 6px;
   overflow: hidden;
-  transition: box-shadow 0.3s, transform 0.3s; /* Added transform for hover effect */
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .listings-grid .listing-card:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px); /* Subtle lift on hover */
+  transform: translateY(-5px);
 }
 
 .listings-grid .listing-card img {
   width: 100%;
-  height: 200px; /* Increased image height */
+  height: 200px;
   object-fit: cover;
 }
 
 .listings-grid .listing-card .info {
-  padding: 15px; /* Increased padding */
+  padding: 15px;
 }
 
 .listings-grid .listing-card .info h3 {
-  margin: 10px 0; /* Increased margin */
-  font-size: 20px; /* Increased font size */
+  margin: 10px 0;
+  font-size: 20px;
   color: #c00;
 }
 
 .listings-grid .listing-card .info p {
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   color: #555;
 }
 
-/* Specific styles for Companies listing cards */
+/* Companies section image sizes */
 .companies-section .listing-card img {
-  height: 150px; /* Increased image height */
-  object-fit: contain; /* Maintain aspect ratio */
+  height: 150px;
+  object-fit: contain;
 }
 
 .companies-section .listing-card .info h3 {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
 }
 
 .companies-section .listing-card .info p {
-  font-size: 14px; /* Increased font size */
+  font-size: 14px;
   color: #777;
 }
 
-/* CTA Buttons */
 .cta-buttons {
-  margin-top: 25px; /* Increased margin */
+  margin-top: 25px;
   display: flex;
-  gap: 15px; /* Increased gap */
-  justify-content: center; /* Center the buttons */
+  gap: 15px;
+  justify-content: center;
 }
 
-/* ===================== */
-/* Property Listings Styles */
-/* ===================== */
-
+/* Property Listings */
 .property-listings {
-  margin-bottom: 60px; /* Increased margin */
+  margin-bottom: 60px;
 }
 
 .property-listings h2 {
-  margin-bottom: 25px; /* Increased bottom margin */
-  font-size: 28px; /* Increased font size */
+  margin-bottom: 25px;
+  font-size: 28px;
   color: #e3000f;
-  text-align: center; /* Centered heading */
+  text-align: center;
 }
 
-/* The .listings-grid and .listing-card classes are reused */
-
-/* See All Links */
 .see-all,
 .see-all-sidebar {
   display: inline-block;
-  margin-top: 20px; /* Increased margin */
+  margin-top: 20px;
   color: #007bff;
   font-weight: bold;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -430,25 +526,22 @@ a {
   color: #0056b3;
 }
 
-/* ===================== */
-/* Sidebar Styles */
-/* ===================== */
-
+/* Sidebar */
 .sidebar {
   grid-area: sidebar;
   background: #f0f0f0;
-  padding: 25px 35px; /* Increased padding */
+  padding: 25px 35px;
   border-left: 1px solid #ddd;
 }
 
-/* Existing New Car Offer Ad */
+/* Sidebar Ads */
 .sidebar-ad.top-ad {
   background: #fff;
-  padding: 20px; /* Increased padding */
-  margin-bottom: 25px; /* Increased margin */
+  padding: 20px;
+  margin-bottom: 25px;
   text-align: center;
-  border: 2px solid #ddd; /* Thicker border */
-  border-radius: 6px; /* Increased border-radius */
+  border: 2px solid #ddd;
+  border-radius: 6px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -457,24 +550,17 @@ a {
   transform: translateY(-5px);
 }
 
-.sidebar-ad.top-ad img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px; /* Increased margin */
-}
-
 .sidebar-ad.top-ad p {
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   color: #555;
 }
 
-/* Featured Properties Section */
 .sidebar-ad.properties-ad {
   background: #fff;
-  padding: 20px; /* Increased padding */
-  margin-bottom: 25px; /* Increased margin */
-  border: 2px solid #ddd; /* Thicker border */
-  border-radius: 6px; /* Increased border-radius */
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -484,48 +570,44 @@ a {
 }
 
 .sidebar-ad.properties-ad h3 {
-  font-size: 20px; /* Increased font size */
+  font-size: 20px;
   color: #e3000f;
-  margin-bottom: 15px; /* Increased margin */
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .sidebar-featured-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column for sidebar */
-  gap: 15px; /* Increased gap */
-}
-
-.sidebar-featured-grid .listing-card {
-  height: auto;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .sidebar-featured-grid .listing-card img {
-  height: 150px; /* Increased image height */
+  height: 150px;
   object-fit: cover;
 }
 
 .sidebar-featured-grid .listing-card .info {
-  padding: 10px; /* Increased padding */
+  padding: 10px;
 }
 
 .sidebar-featured-grid .listing-card .info h3 {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
   color: #c00;
 }
 
 .sidebar-featured-grid .listing-card .info p {
-  font-size: 14px; /* Increased font size */
+  font-size: 14px;
   color: #555;
 }
 
 .see-all-sidebar {
   display: block;
-  margin-top: 15px; /* Increased margin */
+  margin-top: 15px;
   text-align: center;
   color: #007bff;
   font-weight: bold;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   transition: color 0.3s;
 }
 
@@ -533,13 +615,12 @@ a {
   color: #0056b3;
 }
 
-/* Telegram Bot Ad */
 .sidebar-ad.bot-ad {
   background: #fff;
-  padding: 20px; /* Increased padding */
+  padding: 20px;
   text-align: center;
-  border: 2px solid #ddd; /* Thicker border */
-  border-radius: 6px; /* Increased border-radius */
+  border: 2px solid #ddd;
+  border-radius: 6px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
@@ -549,45 +630,30 @@ a {
 }
 
 .sidebar-ad.bot-ad h3 {
-  font-size: 20px; /* Increased font size */
+  font-size: 20px;
   color: #e3000f;
-  margin-bottom: 15px; /* Increased margin */
+  margin-bottom: 15px;
 }
 
 .sidebar-ad.bot-ad p {
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   color: #555;
 }
 
-/* ===================== */
-/* Footer Styles */
-/* ===================== */
-
+/* Footer */
 .footer {
   grid-area: footer;
   text-align: center;
-  padding: 20px 30px; /* Increased padding */
+  padding: 20px 30px;
   background: #eee;
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   color: #555;
 }
 
-/* ===================== */
 /* Responsive Styles */
-/* ===================== */
-
 @media (max-width: 1200px) {
   .listings-grid {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted min-width */
-  }
-
-  .companies-list {
-      gap: 15px;
-  }
-
-  .company-card img {
-      width: 80px;
-      height: 80px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }
 
@@ -608,36 +674,8 @@ a {
       justify-content: center;
   }
 
-  .main-content {
-      padding: 20px; /* Maintained increased padding */
-  }
-
-  .sidebar {
-      padding: 20px; /* Maintained increased padding */
-      border-left: none;
-      border-top: 1px solid #ddd;
-  }
-
   .listings-grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted min-width for larger cards */
-  }
-
-  .companies-section h2,
-  .property-listings h2 {
-      font-size: 24px; /* Maintained increased font size */
-  }
-
-  /* Adjust new companies search section */
-  .companies-search-section h2 {
-      font-size: 22px; /* Slight increase for better visibility */
-  }
-
-  .companies-search-bar input {
-      flex: 1 1 100%;
-  }
-
-  .companies-search-bar button {
-      flex: 1 1 100%;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
@@ -662,67 +700,8 @@ a {
       font-size: 14px;
   }
 
-  .companies-list {
-      gap: 10px;
-  }
-
-  .company-card img {
-      width: 60px;
-      height: 60px;
-  }
-
   .listings-grid {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjusted for smaller screens */
-  }
-
-  .sidebar-property-card {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
-  .sidebar-property-card img {
-      width: 100%;
-      height: auto;
-  }
-
-  .sidebar-property-card .property-info h4 {
-      font-size: 14px;
-  }
-
-  .sidebar-property-card .property-info p {
-      font-size: 12px;
-  }
-
-  /* Adjust companies search section for smaller screens */
-  .companies-search-section {
-      margin-bottom: 25px; /* Reduced margin */
-  }
-
-  .companies-search-bar {
-      flex-direction: column;
-  }
-
-  .companies-search-bar input,
-  .companies-search-bar button {
-      flex: 1 1 100%;
-  }
-
-  /* Adjust Featured Properties in Sidebar */
-  .sidebar-featured-grid {
-      grid-template-columns: 1fr;
-      gap: 10px;
-  }
-
-  .sidebar-featured-grid .listing-card img {
-      height: 120px;
-  }
-
-  .sidebar-featured-grid .listing-card .info h3 {
-      font-size: 16px;
-  }
-
-  .sidebar-featured-grid .listing-card .info p {
-      font-size: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
 }
 
@@ -732,32 +711,29 @@ a {
   }
 
   .listings-grid {
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Further adjusted min-width */
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 }
 
-/* ===================== */
-/* Map Section Styles */
-/* ===================== */
-
+/* Map Section */
 .map-section {
-  margin-bottom: 60px; /* Increased margin for spacing */
-  padding: 20px 40px; /* Increased padding */
-  background-color: #f9f9f9; /* Light background for contrast */
+  margin-bottom: 60px;
+  padding: 20px 40px;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .map-section h2 {
   margin-bottom: 20px;
-  font-size: 28px; /* Consistent with other section headings */
+  font-size: 28px;
   color: #e3000f;
   text-align: center;
 }
 
 .map-container {
   width: 100%;
-  height: 450px; /* Adjust height as needed */
+  height: 450px;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -767,4 +743,10 @@ a {
   height: 100%;
   border: none;
   border-radius: 8px;
+}
+
+/* Add transitions for smooth theme changes */
+body, .top-header, .main-nav, .search-section, .associated-sites, .companies-search-section, 
+.companies-section, .property-listings, .map-section, .sidebar, .footer {
+  transition: background 0.3s, color 0.3s, border 0.3s;
 }
