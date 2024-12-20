@@ -1,0 +1,609 @@
+/* ===================== */
+/* New Design Styles */
+/* ===================== */
+
+/* Reset and Namespace */
+.new-design * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.new-design body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #fff8f0;
+  color: #2c3e50;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "search search"
+    "assoc assoc"
+    "main sidebar"
+    "footer footer";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  min-height: 100vh;
+}
+
+.new-design img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.new-design a {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.new-design .btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.new-design .btn.green {
+  background: #27ae60;
+  color: #fff;
+}
+
+.new-design .btn.green:hover {
+  background: #1e8449;
+}
+
+.new-design .btn.red {
+  background: #c0392b;
+  color: #fff;
+}
+
+.new-design .btn.red:hover {
+  background: #992d22;
+}
+
+.new-design .btn.blue {
+  background: #2980b9;
+  color: #fff;
+}
+
+.new-design .btn.blue:hover {
+  background: #1f6391;
+}
+
+.new-design .btn.blue-outline {
+  background: transparent;
+  color: #2980b9;
+  border: 2px solid #2980b9;
+}
+
+.new-design .btn.blue-outline:hover {
+  background: #2980b9;
+  color: #fff;
+}
+
+/* Header Styles */
+.new-design .top-header {
+  grid-area: header;
+  background: #f39c12;
+  border-bottom: 1px solid #e67e22;
+  padding: 20px 40px;
+}
+
+.new-design .top-header__content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.new-design .demir-logo {
+  max-height: 70px;
+}
+
+.new-design .mortgage-info h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.new-design .mortgage-info a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/* Navigation Styles */
+.new-design .main-nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e74c3c;
+  color: #ecf0f1;
+  padding: 15px 30px;
+}
+
+.new-design .house-logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.new-design .nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.new-design .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.new-design .nav-menu li {
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-size: 16px;
+  color: #ecf0f1;
+}
+
+.new-design .nav-menu li.active,
+.new-design .nav-menu li:hover {
+  background: #c0392b;
+}
+
+.new-design .nav-right a {
+  color: #ecf0f1;
+  margin-right: 15px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.new-design .nav-right a:hover {
+  color: #bdc3c7;
+}
+
+/* Search Section Styles */
+.new-design .search-section {
+  grid-area: search;
+  background: #f1c40f;
+  padding: 20px 30px;
+  border: 4px solid #e67e22;
+  border-radius: 8px;
+  margin: 20px;
+  color: #2c3e50;
+}
+
+.new-design .search-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.new-design .search-bar select,
+.new-design .search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e67e22;
+  border-radius: 4px;
+  flex: 1 1 200px;
+}
+
+.new-design .search-bar input {
+  flex: 2 1 400px;
+}
+
+.new-design .search-bar button {
+  flex: 0 1 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.new-design .highlighted-text {
+  font-size: 18px;
+  color: #2c3e50;
+  border: 4px solid #e67e22;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Associated Sites Styles */
+.new-design .associated-sites {
+  grid-area: assoc;
+  display: flex;
+  gap: 25px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e67e22;
+  background: #f39c12;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.new-design .associated-sites a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  flex: 1 1 250px;
+  padding: 15px;
+  border: 1px solid #e67e22;
+  border-radius: 4px;
+  transition: background 0.3s, border 0.3s;
+  font-size: 16px;
+  background: #e74c3c;
+}
+
+.new-design .associated-sites a:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+}
+
+.new-design .associated-sites img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Main Content Styles */
+.new-design .main-content {
+  grid-area: main;
+  padding: 25px 40px;
+}
+
+/* Search Companies Section */
+.new-design .companies-search-section {
+  margin-bottom: 40px;
+  border: 4px solid #e67e22;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f39c12;
+  color: #2c3e50;
+}
+
+.new-design .companies-search-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.new-design .companies-search-bar {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.new-design .companies-search-bar input {
+  flex: 1 1 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e67e22;
+  border-radius: 4px;
+}
+
+.new-design .companies-search-bar button {
+  flex: 0 1 auto;
+  padding: 10px 25px;
+}
+
+.new-design .companies-search-bar button {
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.new-design .companies-search-bar button:hover {
+  background: #1f6391;
+}
+
+/* Companies Section */
+.new-design .companies-section {
+  margin-bottom: 50px;
+}
+
+.new-design .companies-section h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.new-design .listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.new-design .listings-grid .listing-card {
+  background: #ecf0f1;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.new-design .listings-grid .listing-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.new-design .listings-grid .listing-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.new-design .listings-grid .listing-card .info {
+  padding: 15px;
+}
+
+.new-design .listings-grid .listing-card .info h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #e67e22;
+}
+
+.new-design .listings-grid .listing-card .info p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Property Listings */
+.new-design .property-listings {
+  margin-bottom: 60px;
+}
+
+.new-design .property-listings h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.new-design .see-all,
+.new-design .see-all-sidebar {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2980b9;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.new-design .see-all:hover,
+.new-design .see-all-sidebar:hover {
+  color: #1f6391;
+}
+
+/* Sidebar */
+.new-design .sidebar {
+  grid-area: sidebar;
+  background: #f39c12;
+  padding: 25px 35px;
+  border-left: 1px solid #e67e22;
+}
+
+/* Sidebar Ads */
+.new-design .sidebar-ad.top-ad {
+  background: #e74c3c;
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+}
+
+.new-design .sidebar-ad.top-ad:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.new-design .sidebar-ad.top-ad p {
+  font-size: 16px;
+  color: #ecf0f1;
+}
+
+.new-design .sidebar-ad.properties-ad {
+  background: #e74c3c;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+}
+
+.new-design .sidebar-ad.properties-ad:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.new-design .sidebar-ad.properties-ad h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.new-design .sidebar-featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.new-design .sidebar-featured-grid .listing-card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.new-design .sidebar-featured-grid .listing-card .info {
+  padding: 10px;
+}
+
+.new-design .sidebar-featured-grid .listing-card .info h3 {
+  font-size: 18px;
+  color: #e67e22;
+}
+
+.new-design .sidebar-featured-grid .listing-card .info p {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.new-design .see-all-sidebar {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.new-design .sidebar-ad.bot-ad {
+  background: #e74c3c;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+}
+
+.new-design .sidebar-ad.bot-ad:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+.new-design .sidebar-ad.bot-ad h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.new-design .sidebar-ad.bot-ad p {
+  font-size: 16px;
+  color: #ecf0f1;
+}
+
+/* Footer */
+.new-design .footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 20px 30px;
+  background: #e67e22;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .new-design .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .new-design body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "search"
+      "assoc"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .new-design .associated-sites {
+      justify-content: center;
+  }
+
+  .new-design .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .new-design .search-bar {
+      flex-direction: column;
+  }
+
+  .new-design .search-bar select,
+  .new-design .search-bar input,
+  .new-design .search-bar button {
+      flex: 1 1 100%;
+  }
+
+  .new-design .nav-menu {
+      flex-wrap: wrap;
+      gap: 5px;
+  }
+
+  .new-design .nav-menu li {
+      padding: 5px;
+      font-size: 14px;
+  }
+
+  .new-design .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .new-design .associated-sites a {
+      flex: 1 1 100%;
+  }
+
+  .new-design .listings-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Map Section */
+.new-design .map-section {
+  margin-bottom: 60px;
+  padding: 20px 40px;
+  background-color: #f1c40f;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-design .map-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #c0392b;
+  text-align: center;
+}
+
+.new-design .map-container {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.new-design .map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Add transitions for smooth design changes */
+.new-design body, .new-design .top-header, .new-design .main-nav, .new-design .search-section, 
+.new-design .associated-sites, .new-design .companies-search-section, 
+.new-design .companies-section, .new-design .property-listings, .new-design .map-section, 
+.new-design .sidebar, .new-design .footer {
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
